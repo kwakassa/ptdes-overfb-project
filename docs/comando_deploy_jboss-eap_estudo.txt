@@ -1,0 +1,14 @@
+-- Parar as aplicacoes de um server-group --
+C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="server-group=<server-group>:stop-servers"
+
+-- Realizar undeploy de uma aplicacao existente --
+C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="undeploy <Arquivo_WAR_ou_EAR> --server-groups=<server-group>"
+
+-- Realizar deploy de uma aplicacao --
+C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy <Arquivo_WAR_ou_EAR> --server-groups=<server-group>"
+C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy <Arquivo_WAR_ou_EAR> --name=<nome_contexto>--server-groups=<server-group>"
+
+-- Realizar Start das aplicações de um server-group --
+C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="server-group=<server-group>:start-servers"
+
+jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy jenkins_1.568.war --name=jenkins.war --server-groups=jenkins-group"
