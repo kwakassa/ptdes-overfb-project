@@ -5,7 +5,6 @@
 	<persistence-unit name="overdb" transaction-type="JTA">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<jta-data-source>java:jboss/ptdes/overdb</jta-data-source>
-		<class>br.gov.caixa.ptdes.entity.Cliente</class>
 		
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>

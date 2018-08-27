@@ -22,10 +22,10 @@ iframe{
 }
 .boas-vindas {
 	text-align: center;
-	background-color: #fff;
 	color: #009;
-	padding-top: 120px;
-	font-size: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 36px;
 	text-transform: uppercase;
 }
 .titulo-principal {
