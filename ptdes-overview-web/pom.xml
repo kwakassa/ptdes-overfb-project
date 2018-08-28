@@ -68,7 +68,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<skip>false</skip>
+					<skip>true</skip>
 					<hostname>localhost</hostname>
 					<username>ptdes</username>
 					<password>Ptdes01!</password>
