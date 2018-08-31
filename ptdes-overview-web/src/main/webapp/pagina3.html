@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Veja seu n&uacute;mero da sorte</title>
+	</head>
+	<script type="text/javascript">
+	
+		function getRndInteger(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
+		}
+		
+		function getNumeros(){
+			var txtNum = "";
+			for(i = 0; i < 6; i++){
+				txtNum += getRndInteger(1,60) + " ";
+			}
+			return txtNum;
+		}
+		function eventoGetNumeros(){
+			document.getElementById('numSorte').innerHTML = getNumeros();
+		}
+		<!-- funcao retirada de: https://www.w3schools.com/js/tryit.asp?filename=tryjs_random_function2 -->
+			
+	</script>
+	<body>
+		<p>Veja seu n&uacute;mero da sorte</p>
+		<button onclick="eventoGetNumeros()">Gerar</button>
+		<p>N&uacute;meros: </p><p id="numSorte"></p>
+		<br>
+		<a href="pagina4.jsp">Consulte os Ganhadores</a>
+	</body>
+</html>
