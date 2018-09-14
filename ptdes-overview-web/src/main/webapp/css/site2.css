@@ -1,0 +1,53 @@
+.cabecalho {
+	background-color: #0039ba;
+}
+
+.cabecalho img {
+	width: 100px;
+	height: 100px;
+	border-width: 0px;
+}
+
+iframe{
+	width: 100%;
+	border-width: 0px;
+	overflow: hidden;
+	padding: 0;
+}
+
+.boas-vindas {
+	text-align: center;
+	color: #009;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 36px;
+	text-transform: uppercase;
+}
+.login-titulo{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.div-logo1{
+	size: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.div-logo1 img{
+	vertical-align: middle;
+}
+.div-logo1 h1{
+	text-align: right;
+	vertical-align: middle;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	display: inline;
+}
+
+embed{
+	overflow: hidden;
+}
