@@ -1,0 +1,17 @@
+-- Parar as aplicacoes de um server-group --
+sudo -u <usuario_jboss> /<jboss-eap>/jboss.sh <server-group> stop-group
+Exemplo: sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh <server-group> stop-group
+
+-- Realizar undeploy de uma aplicacao existente --
+sudo -u <usuario_jboss> /<jboss-eap>/jboss.sh undeploy <arquivo.ear>
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh undeploy <arquivo.ear>
+
+-- Realizar deploy de uma aplicacao --
+sudo -u <usuario_jboss> <jboss-eap>/jboss.sh <server-group> deploy <arquivo.ear>
+sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh <server-group> deploy <arquivo.ear>
+
+-- Realizar Start das aplicacoes de um server-group --
+sudo -u <usuario_jboss> /<jboss-eap>/jboss.sh <server-group> start-group
+Exemplo: sudo -u jboss6 /opt/jboss/jboss-eap-6.4/jboss.sh <server-group> start-group
+
+jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy jenkins_1.568.war --name=jenkins.war --server-groups=jenkins-group"

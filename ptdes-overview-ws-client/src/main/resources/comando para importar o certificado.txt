@@ -1,0 +1,14 @@
+---Importar um certificacod para o cacerts para que JVM do java confie nesse certificado. Usado nas comunicações de urls com https
+keytool -import -alias sibar -file DESBARRAMENTOCAIXA.crt -keystore %JAVA_HOME%\jre\lib\security\cacerts
+
+senha: changeit
+
+--- Como Alterar a senha padrão do cacerts
+Opcional(Nao mudar para o curso): para mudar a senha do cacerts do java digite: 
+keytool -storepasswd \ -keystore %JAVA_HOME%\jre\lib\security\cacerts
+
+Preencha a senha antiga a nova e sua confirmação.
+
+--- Como remover um certificado do cacerts
+keytool -delete -alias �ALIAS_DO_CERTIFICADO_A_SER_REMOVIDO� -keystore �PATH_DO_CACERTS�
+keytool -delete -alias sibar -keystore %JAVA_HOME%\jre\lib\security\cacerts

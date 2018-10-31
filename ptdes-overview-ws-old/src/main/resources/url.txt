@@ -1,0 +1,5 @@
+http://localhost:8080/overfbOldWs/
+
+http://localhost:8080/overfbOldWs/oldRest/oldRS/
+
+http://localhost:8080/overfbOldWs/oldRest/oldRS/"Ola Mundo"

@@ -17,6 +17,11 @@ public class CalculaCPFHelper {
 	}
 	
 	public String calculaDigitoCpf(String numSemDigito){
+		try{
+			Integer.parseInt(numSemDigito);
+		}catch (NumberFormatException e) {
+			throw new NumberFormatException("Formato Invalido. A Informacao deve ser numerica");
+		}
 		if ((numSemDigito==null) || (numSemDigito.length()!=9)){
 			throw new NumberFormatException("A string do numero deve conter 9 digitos.");
 		}else{

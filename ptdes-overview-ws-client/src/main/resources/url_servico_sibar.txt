@@ -1,0 +1,1 @@
+http://des.barramento.caixa/sibar/ConsultaSaldo?wsdl

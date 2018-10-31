@@ -1,0 +1,23 @@
+--- Urls para Teste de Servico REST ---
+
+# Usar Navedador e/ou Paginas Web para Teste
+
+# Url para Exemplo Simples de REST:
+
+http://localhost:8080/overfbWs/
+
+http://localhost:8080/overfbWs/rest/servicoRS/
+
+http://localhost:8080/overfbWs/rest/servicoRS/Pipoca
+
+http://localhost:8080/overfbWs/rest/servicoRS/"Salada de Frutas"
+
+--- Urls para Teste de Servico SOAP ---
+ 
+# Usar a ferramenta "SOAP UI" ou Aplicacao que se comunique com servico SOAP
+
+# Url do WSDL (Schema):
+
+http://localhost:8080/overfbWs/cpfSoap?wsdl
+
+http://des.barramento.caixa/sibar/ConsultaSaldo?wsdl

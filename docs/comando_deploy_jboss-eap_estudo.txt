@@ -8,7 +8,7 @@ C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="u
 C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy <Arquivo_WAR_ou_EAR> --server-groups=<server-group>"
 C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy <Arquivo_WAR_ou_EAR> --name=<nome_contexto>--server-groups=<server-group>"
 
--- Realizar Start das aplicações de um server-group --
+-- Realizar Start das aplicacoes de um server-group --
 C:\<jboss-eap>\bin\jboss-cli --controller=127.0.0.1:9999 --connect --commands="server-group=<server-group>:start-servers"
 
-jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy jenkins_1.568.war --name=jenkins.war --server-groups=jenkins-group"
+jboss-cli --controller=127.0.0.1:9999 --connect --commands="deploy jenkins_2.149.war --name=jenkins.war --server-groups=jenkins-group"

@@ -7,7 +7,7 @@
 		<version>${ptdes.project.version}</version>
 	</parent>
 	<artifactId>ptdes-overview-core</artifactId>
-	<packaging>jar</packaging>
+	<packaging>ejb</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -43,6 +43,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>overfbCore</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -50,6 +51,13 @@
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<configuration>
+					<ejbVersion>3.1</ejbVersion>
 				</configuration>
 			</plugin>
 			<plugin>

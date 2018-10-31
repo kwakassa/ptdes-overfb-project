@@ -1,0 +1,26 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:con="http://caixa.gov.br/sibar/consulta_saldo" xmlns:sib="http://caixa.gov.br/sibar">
+	<soapenv:Header />
+	<soapenv:Body>
+		<con:SERVICO_ENTRADA>
+			<sib:HEADER>
+				<VERSAO>2.0</VERSAO>
+				<USUARIO_SERVICO>SMTXSD01</USUARIO_SERVICO>
+				<OPERACAO>CONSULTA_SALDO</OPERACAO>
+				<SISTEMA_ORIGEM>SIMTX</SISTEMA_ORIGEM>
+				<DATA_HORA>20181019155200</DATA_HORA>
+			</sib:HEADER>
+			<DADOS>
+				<!--You have a CHOICE of the next 2 items at this level -->
+				<CONSULTA_SALDO>
+					<CONTA>
+						<AGENCIA>0239</AGENCIA>
+						<OPERACAO>001</OPERACAO>
+						<NUMERO>41</NUMERO>
+						<DV>6</DV>
+					</CONTA>
+				</CONSULTA_SALDO>
+			</DADOS>
+		</con:SERVICO_ENTRADA>
+	</soapenv:Body>
+</soapenv:Envelope>

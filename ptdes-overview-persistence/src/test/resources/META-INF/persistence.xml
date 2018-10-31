@@ -10,14 +10,16 @@
         <!-- Implementação do JPA, no nosso caso Hibernate -->
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Aqui são listadas todas as entidades -->
-        <class>br.gov.caixa.ptdes.entity.Cliente</class>
-
+		<class>br.gov.caixa.ptdes.entity.Ofbtb001GrupoAcesso</class>
+		<class>br.gov.caixa.ptdes.entity.Ofbtb002Usuario</class>
+		<class>br.gov.caixa.ptdes.entity.Ofbtb004Conta</class>
+		<class>br.gov.caixa.ptdes.entity.Ofbtb003Cliente</class>
         <properties>    
             <!-- Propriedades JDBC -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/overdb" />
-            <property name="javax.persistence.jdbc.user" value="admin" />
-            <property name="javax.persistence.jdbc.password" value="admin" />
+            <property name="javax.persistence.jdbc.user" value="ptdes" />
+            <property name="javax.persistence.jdbc.password" value="ptdes" />
 
             <!-- Configurações específicas do Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
@@ -28,10 +30,10 @@
     			create-drop: drop the schema when the SessionFactory is closed explicitly, typically when the application is stopped.            	
              -->
             <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="true" />
-            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
             <property name="hibernate.use_sql_comments" value="true" />
-            <property name="log4j.logger.org.hibernate.SQL" value="DEBUG" />
+            <property name="log4j.logger.org.hibernate.SQL" value="INFO" />
         </properties>
     </persistence-unit>
 </persistence>

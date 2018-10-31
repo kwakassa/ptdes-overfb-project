@@ -10,6 +10,10 @@
 		<module>ptdes-overview-persistence</module>
 		<module>ptdes-overview-core</module>
 		<module>ptdes-overview-web</module>
+		<module>ptdes-overview-ws</module>
+		<module>ptdes-overview-ws-old</module>
+		<module>ptdes-overview-ws-client</module>
+		<module>ptdes-overview-ear</module>
 	</modules>
 	<properties>
 		<ptdes.project.version>1.0.0</ptdes.project.version>
@@ -19,6 +23,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.surfire.plugin.version>2.17</maven.surfire.plugin.version>
 		<maven.war.plugin.version>2.3</maven.war.plugin.version>
+		<version.ear.plugin>2.10</version.ear.plugin>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -53,6 +58,11 @@
 				<groupId>org.javamoney</groupId>
 				<artifactId>moneta</artifactId>
 				<version>1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>br.gov.caixa</groupId>
+				<artifactId>ptdes-overview-web</artifactId>
+				<version>${ptdes.project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
