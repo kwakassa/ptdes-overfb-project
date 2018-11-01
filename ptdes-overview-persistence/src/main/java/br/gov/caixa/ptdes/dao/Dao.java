@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 
+import javax.ejb.Remote;
+
+@Remote
 public interface Dao<PK extends Serializable, E> {
 
 	public void insere(E entidade) throws SQLException;

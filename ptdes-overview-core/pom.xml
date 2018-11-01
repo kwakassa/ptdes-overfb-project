@@ -29,10 +29,10 @@
 			<artifactId>caelum-stella-core</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.javamoney/moneta -->
-		<dependency>
-			<groupId>org.javamoney</groupId>
-			<artifactId>moneta</artifactId>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.javamoney</groupId> -->
+<!-- 			<artifactId>moneta</artifactId> -->
+<!-- 		</dependency> -->
 		<!-- Modulo Interno de Persistencia -->
 		<dependency>
 			<groupId>br.gov.caixa</groupId>

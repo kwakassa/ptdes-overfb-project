@@ -9,7 +9,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import org.apache.log4j.Logger;
-@Stateless
+
 public abstract class DaoImpl<E,PK extends Serializable> implements Dao<PK, E> {
 	private static final Logger logger = Logger.getLogger(DaoImpl.class);
 	@PersistenceContext(unitName = "ofbDS")

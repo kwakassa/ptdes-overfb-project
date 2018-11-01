@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -14,14 +13,13 @@ import org.apache.log4j.Logger;
 
 import br.gov.caixa.ptdes.entity.Ofbtb002Usuario;
 @Stateless
-@LocalBean
-public class Ofbtb002UsuarioDao implements Serializable{
+public class Ofbtb002UsuarioDao implements UsuarioDaoRemote, Serializable{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = Logger.getLogger(Ofbtb002UsuarioDao.class);
 	protected Class<Ofbtb002Usuario> type;
 	protected String entityName;
 	
-	@PersistenceContext
+	@PersistenceContext(name = "ofbDS", unitName = "ofbDS")
 	protected EntityManager em;
 	
 	public Ofbtb002UsuarioDao() {
