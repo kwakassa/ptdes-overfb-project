@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
 
 import br.gov.caixa.ptdes.entity.Ofbtb002Usuario;
 @Stateless
-public class Ofbtb002UsuarioDao implements UsuarioDaoRemote, Serializable{
+public class Ofbtb002UsuarioDao implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private static final Logger logger = Logger.getLogger(Ofbtb002UsuarioDao.class);
 	protected Class<Ofbtb002Usuario> type;

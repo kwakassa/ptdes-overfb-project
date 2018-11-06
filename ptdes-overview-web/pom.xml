@@ -42,14 +42,12 @@
 			<groupId>br.gov.caixa</groupId>
 			<artifactId>ptdes-overview-core</artifactId>
 			<version>1.0.0</version>
-			<scope>provided</scope>
 		</dependency>
 		
 		<dependency>
 			<groupId>br.gov.caixa</groupId>
 			<artifactId>ptdes-overview-persistence</artifactId>
 			<version>1.0.0</version>
-			<scope>provided</scope>
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->

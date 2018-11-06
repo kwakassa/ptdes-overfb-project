@@ -12,18 +12,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>br.gov.caixa</groupId>
-			<artifactId>ptdes-overview-core</artifactId>
-			<type>ejb</type>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>br.gov.caixa</groupId>
-			<artifactId>ptdes-overview-persistence</artifactId>
-			<type>ejb</type>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>br.gov.caixa</groupId>
 			<artifactId>ptdes-overview-web</artifactId>
 			<type>war</type>
 			<version>${project.version}</version>
@@ -59,16 +47,6 @@
 				<version>${version.ear.plugin}</version>
 				<configuration>
 					<modules>
-						<ejbModule>
-							<groupId>br.gov.caixa</groupId>
-							<artifactId>ptdes-overview-core</artifactId>
-							<bundleFileName>overfbCore.jar</bundleFileName>
-						</ejbModule>
-						<ejbModule>
-							<groupId>br.gov.caixa</groupId>
-							<artifactId>ptdes-overview-persistence</artifactId>
-							<bundleFileName>overfbPersistence.jar</bundleFileName>
-						</ejbModule>				
 						<webModule>
 							<groupId>br.gov.caixa</groupId>
 							<artifactId>ptdes-overview-web</artifactId>
