@@ -85,4 +85,10 @@ public class Ofbtb003Cliente implements java.io.Serializable {
 		this.ofbtb004Contas = ofbtb004Contas;
 	}
 
+	@Override
+	public String toString() {
+		return "Ofbtb003Cliente [nuCpfCliente=" + nuCpfCliente + ", noCliente=" + noCliente + ", dtNascimento="
+				+ dtNascimento + ", ofbtb004Contas=" + ofbtb004Contas + "]";
+	}
+	
 }

@@ -59,4 +59,10 @@ public class Ofbtb002Usuario implements java.io.Serializable {
 		this.deSenha = deSenha;
 	}
 
+	@Override
+	public String toString() {
+		return "Ofbtb002Usuario [noUsuario=" + noUsuario + ", ofbtb001GrupoAcesso=" + ofbtb001GrupoAcesso + ", deSenha="
+				+ deSenha + "]";
+	}
+	
 }

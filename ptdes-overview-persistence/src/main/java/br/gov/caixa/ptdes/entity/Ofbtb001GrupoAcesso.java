@@ -1,13 +1,15 @@
 package br.gov.caixa.ptdes.entity;
 // Generated 30/10/2018 21:04:33 by Hibernate Tools 5.2.3.Final
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 import java.util.HashSet;
 import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
@@ -67,4 +69,10 @@ public class Ofbtb001GrupoAcesso implements java.io.Serializable {
 		this.ofbtb002Usuarios = ofbtb002Usuarios;
 	}
 
+	@Override
+	public String toString() {
+		return "Ofbtb001GrupoAcesso [nuGrupoAcesso=" + nuGrupoAcesso + ", noGrupoAcesso=" + noGrupoAcesso
+				+ ", ofbtb002Usuarios=" + ofbtb002Usuarios + "]";
+	}
+	
 }

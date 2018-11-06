@@ -136,4 +136,9 @@ public class Ofbtb004Conta implements java.io.Serializable {
 		this.ofbtb003Clientes = ofbtb003Clientes;
 	}
 
+	@Override
+	public String toString() {
+		return "Ofbtb004Conta [nuNsuConta=" + nuNsuConta + "]";
+	}
+	
 }

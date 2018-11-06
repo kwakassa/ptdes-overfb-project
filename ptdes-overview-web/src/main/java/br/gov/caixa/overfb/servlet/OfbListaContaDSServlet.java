@@ -14,33 +14,35 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-import br.gov.caixa.ptdes.bean.TestaListaUsuariosBean;
-import br.gov.caixa.ptdes.dao.Ofbtb002UsuarioDao;
-import br.gov.caixa.ptdes.entity.Ofbtb002Usuario;
+import br.gov.caixa.ptdes.dao.Ofbtb003ClienteDao;
+import br.gov.caixa.ptdes.dao.Ofbtb004ContaDao;
+import br.gov.caixa.ptdes.entity.Ofbtb001GrupoAcesso;
+import br.gov.caixa.ptdes.entity.Ofbtb003Cliente;
+import br.gov.caixa.ptdes.entity.Ofbtb004Conta;
 
-@WebServlet(name="OfbListaUsuariosServlet" , urlPatterns = "/listaUsuarios")
-public class OfbListaUsuariosDSServlet extends HttpServlet implements Serializable{
-	private static final Logger logger = Logger.getLogger(OfbListaUsuariosDSServlet.class);
+@WebServlet(name="OfbListaClientesServlet" , urlPatterns = "/listaContas")
+public class OfbListaContaDSServlet extends HttpServlet implements Serializable{
+	private static final Logger logger = Logger.getLogger(OfbListaContaDSServlet.class);
 	private static final long serialVersionUID = 1L;
-	private static final String conteudoHtmlInicio = "<html>\n  <body>\n    <h1>Pagina de teste de Servlet</h1>\n  Lista Usuarios:<br><br>";
+	private static final String conteudoHtmlInicio = "<html>\n  <body>\n    <h1>Pagina de teste de Servlet</h1>\n  Lista Contas:<br><br>";
 	private static final String conteudoHtmlFim = "</body>\n</html>";
 	
 	@Inject
-	private Ofbtb002UsuarioDao dao;
+	private Ofbtb004ContaDao dao;
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		logger.info("inicio servico de " + this.getClass().getSimpleName());
 		String conteudo = conteudoHtmlInicio;
 		PrintWriter out = response.getWriter();
-		logger.info("instanciando Ofbtb002UsuarioDao()");
-		logger.info("TestaUsuarioBean: " + dao);
-		logger.info("obtendo lista de usuario do banco");
-		List<Ofbtb002Usuario> lista = dao.buscaTudo();
+		logger.info("instanciando Ofbtb004ContaDao()");
+		logger.info("Ofbtb004ContaDao: " + dao);
+		logger.info("obtendo lista de clientes do banco");
+		List<Ofbtb004Conta> lista = dao.buscaTudo();
 		logger.info("Lista: " + lista);
-		conteudo += "Lista:<br>";
-		for (Ofbtb002Usuario usuario : lista) {
-			conteudo += usuario+"<br>";
+		conteudo += "Lista: <br>";
+		for (Ofbtb004Conta conta : lista) {
+			conteudo += conta+"<br>";
 		}
 		conteudo += conteudoHtmlFim;
 		logger.info("fim servico de " + this.getClass().getSimpleName());
