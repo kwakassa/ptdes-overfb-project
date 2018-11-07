@@ -60,7 +60,7 @@ public class Ofbtb001GrupoAcesso implements java.io.Serializable {
 		this.noGrupoAcesso = noGrupoAcesso;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "ofbtb001GrupoAcesso")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "ofbtb001GrupoAcesso")
 	public Set<Ofbtb002Usuario> getOfbtb002Usuarios() {
 		return this.ofbtb002Usuarios;
 	}
@@ -71,8 +71,7 @@ public class Ofbtb001GrupoAcesso implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "Ofbtb001GrupoAcesso [nuGrupoAcesso=" + nuGrupoAcesso + ", noGrupoAcesso=" + noGrupoAcesso
-				+ ", ofbtb002Usuarios=" + ofbtb002Usuarios + "]";
+		return "Ofbtb001GrupoAcesso [nuGrupoAcesso=" + nuGrupoAcesso + ", noGrupoAcesso=" + noGrupoAcesso + "]";
 	}
 	
 }

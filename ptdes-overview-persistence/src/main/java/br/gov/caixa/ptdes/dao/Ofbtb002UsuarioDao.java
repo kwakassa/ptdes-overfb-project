@@ -19,7 +19,7 @@ public class Ofbtb002UsuarioDao implements Serializable{
 	protected Class<Ofbtb002Usuario> type;
 	protected String entityName;
 	
-	@PersistenceContext(name = "ofbDS", unitName = "ofbDS")
+	@PersistenceContext(unitName = "ofbDS")
 	protected EntityManager em;
 	
 	public Ofbtb002UsuarioDao() {

@@ -20,7 +20,7 @@ import br.gov.caixa.ptdes.entity.Ofbtb001GrupoAcesso;
 import br.gov.caixa.ptdes.entity.Ofbtb003Cliente;
 import br.gov.caixa.ptdes.entity.Ofbtb004Conta;
 
-@WebServlet(name="OfbListaClientesServlet" , urlPatterns = "/listaContas")
+@WebServlet(name="OfbListaContasServlet" , urlPatterns = "/listaContas")
 public class OfbListaContaDSServlet extends HttpServlet implements Serializable{
 	private static final Logger logger = Logger.getLogger(OfbListaContaDSServlet.class);
 	private static final long serialVersionUID = 1L;

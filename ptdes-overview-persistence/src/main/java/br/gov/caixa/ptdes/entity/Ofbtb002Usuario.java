@@ -40,7 +40,7 @@ public class Ofbtb002Usuario implements java.io.Serializable {
 		this.noUsuario = noUsuario;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "NU_GRUPO_ACESSO", nullable = false)
 	public Ofbtb001GrupoAcesso getOfbtb001GrupoAcesso() {
 		return this.ofbtb001GrupoAcesso;
@@ -61,8 +61,7 @@ public class Ofbtb002Usuario implements java.io.Serializable {
 
 	@Override
 	public String toString() {
-		return "Ofbtb002Usuario [noUsuario=" + noUsuario + ", ofbtb001GrupoAcesso=" + ofbtb001GrupoAcesso + ", deSenha="
-				+ deSenha + "]";
+		return "Ofbtb002Usuario [noUsuario=" + noUsuario + ", deSenha="	+ deSenha + "]";
 	}
 	
 }

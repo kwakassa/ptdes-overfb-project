@@ -3,6 +3,7 @@ package br.gov.caixa.overfb.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,6 +19,9 @@ import br.gov.caixa.ptdes.helper.LoginHelper;
 public class LoginServlet  extends HttpServlet{
 	private static final Logger logger = Logger.getLogger(LoginServlet.class);
 	private static final long serialVersionUID = 1L;
+	@Inject
+	private LoginHelper loginHelper; 
+	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		logger.info(" --- Inicio LoginServlet ---");
@@ -26,8 +30,7 @@ public class LoginServlet  extends HttpServlet{
 		String senha = request.getParameter("senha");
 		logger.info("Parametro senha: " + senha);
 		logger.debug("Usuario a ser autenticado: " + "["+usuario+","+senha+"]");
-		if(usuario!=null && !usuario.isEmpty() && senha!=null && !senha.isEmpty()){
-			LoginHelper loginHelper = new LoginHelper();
+		if(usuario!=null && !usuario.isEmpty() && senha!=null && !senha.isEmpty()){			
 			logger.info("Autenticando usuario");
 			boolean autenticado = loginHelper.autenticaUsuario(usuario, senha);
 			logger.info("Usuario autencicado: " + autenticado);

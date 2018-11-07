@@ -73,7 +73,7 @@ public class Ofbtb003Cliente implements java.io.Serializable {
 		this.dtNascimento = dtNascimento;
 	}
 
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "OFBTB005_CLIENTE_CONTA", schema = "OFB", catalog = "OVERDB", joinColumns = {
 			@JoinColumn(name = "NU_CPF_CLIENTE_003", nullable = false, updatable = false) }, inverseJoinColumns = {
 					@JoinColumn(name = "NU_NSU_CONTA_004", nullable = false, updatable = false) })
@@ -88,7 +88,7 @@ public class Ofbtb003Cliente implements java.io.Serializable {
 	@Override
 	public String toString() {
 		return "Ofbtb003Cliente [nuCpfCliente=" + nuCpfCliente + ", noCliente=" + noCliente + ", dtNascimento="
-				+ dtNascimento + ", ofbtb004Contas=" + ofbtb004Contas + "]";
-	}
+				+ dtNascimento + "]";
+	}	
 	
 }
