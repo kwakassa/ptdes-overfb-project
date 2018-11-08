@@ -15,7 +15,8 @@
 			<h1>PTDES - Overview Frontend e Backend - P&aacute;gina de IN&Iacute;CIO</h1>
 		</div>
 		<br/>
-		<form name="submitForm" method="POST" action="controller">
+		
+		<form name="submitForm" method="POST" action="cadastroClientes">
 			<a href="javascript:document.submitForm.submit()">Cadastro de Clientes</a>
 		</form>
 	</body>
