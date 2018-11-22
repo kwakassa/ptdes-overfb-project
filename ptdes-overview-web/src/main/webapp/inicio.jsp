@@ -17,7 +17,7 @@
 		<br/>
 		
 		<form id="cadastroForm" method="post" action="controller">
-			<input type="hidden" name="pagina" value="cadastroCliente.jsp" />
+			<input type="hidden" name="tarefa" value="irParaPaginaDeCadastro" />
 			<a href="#" onclick="document.getElementById('cadastroForm').submit()" >Cadastro de Clientes</a>
 		</form>
 	</body>

@@ -11,11 +11,11 @@ import javax.servlet.http.HttpSession;
 import br.gov.caixa.overfb.constante.Constantes;
 
 public class CadastroClientePageController {
-	public static void executa(HttpServletRequest request, HttpServletResponse response, String pagina) throws ServletException, IOException{
+	public static void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		HttpSession session = request.getSession();
 		String grupo = (String)session.getAttribute(Constantes.GRUPO_USUARIO_LOGADO);
 		if(grupo.equals("OFBGES")){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/"+pagina);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/cadastroCliente.jsp");
 			dispatcher.forward(request, response);
 		}else{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/grupo-invalido.jsp");

@@ -18,7 +18,7 @@ import br.gov.caixa.overfb.constante.Constantes;
 import br.gov.caixa.ptdes.helper.LoginHelper;
 import br.gov.caixa.ptdes.vo.UsuarioVO;
 
-@WebServlet(name="loginServlet" , urlPatterns = "/autentica")
+@WebServlet(name="loginServlet" , urlPatterns = "/login")
 public class LoginServlet  extends HttpServlet{
 	private static final Logger logger = Logger.getLogger(LoginServlet.class);
 	private static final long serialVersionUID = 1L;

@@ -21,9 +21,9 @@ public class ControllerServlet extends HttpServlet {
 	
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String pagina = request.getParameter("pagina");
-		if (pagina != null && !pagina.isEmpty()) {
-			PaginaControllerDelegate.delegate(request, response, pagina);
+		String tarefa = request.getParameter("tarefa");
+		if (tarefa != null && !tarefa.isEmpty()) {
+			TarefaControllerDelegate.delegate(request, response, tarefa);
 		}else{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
 			dispatcher.forward(request, response);

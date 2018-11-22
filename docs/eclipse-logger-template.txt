@@ -1,0 +1,14 @@
+Template para logger:
+
+Abra o Eclipse: Va em Windows - Preferences
+
+1) Opções: Java - Editor - Templates
+
+2) Clique no Botao "New".
+2.1) Preencha os campos conforme abaixo:
+
+Name: logger
+Description: Template para logger
+Pattern: private static final ${type:newType(org.apache.log4j.Logger)} logger = Logger.getLogger(${enclosing_type}.class);
+
+Clique em Ok e depois Ok novamente para confirmar.
