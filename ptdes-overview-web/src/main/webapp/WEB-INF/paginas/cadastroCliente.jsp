@@ -16,7 +16,7 @@ h1 {
 
 </head>
 <body>
-	<iframe class="cabecalho" src="/overfb/cabecalho.jsp" seamless></iframe>
+	<iframe class="cabecalho" src="/overfb/cabecalho-ifr.jsp" seamless></iframe>
 	<div align="center">
 		<img src="/overfb/img/logo2.png" height="45">
 		<h1>PTDES - Overview Frontend e Backend - P&aacute;gina de
@@ -25,6 +25,8 @@ h1 {
 	<div align="center">
 		<form name="cadastroCliente" action="controller" method="post"
 			target="_parent">
+			<input type="hidden" name="tarefa" value="cadastrarCliente" />
+			<input type="hidden" name="pagina" value="cadastro-sucesso.jsp" />
 			<table align="center" width="30%" border="0px">
 				<tr align="center">
 					<td width="50%">Nome do Cliente:</td>
@@ -35,10 +37,9 @@ h1 {
 					<td><input id="cpf" name="cpf" type="text" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><form id="login" name="login">
-							<input type="hidden" name="tarefa" value="LoginTarefa" /> <input
-								type="submit" name="botaoCadastro" value="Cadastrar" />
-						</form></td>
+					<td colspan="2" align="center">
+						<input type="submit" name="botaoCadastro" value="Cadastrar" />
+					</td>
 				</tr>
 			</table>
 		</form>

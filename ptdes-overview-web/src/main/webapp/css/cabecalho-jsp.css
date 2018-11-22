@@ -9,4 +9,9 @@
 }
 .texto-usuario{
 	color: #FFF;
+	display: inline;
+}
+
+.mesma-linha{
+	display: inline;
 }

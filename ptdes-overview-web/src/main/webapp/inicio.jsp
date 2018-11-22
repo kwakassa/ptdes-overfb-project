@@ -16,8 +16,9 @@
 		</div>
 		<br/>
 		
-		<form name="submitForm" method="POST" action="cadastroClientes">
-			<a href="javascript:document.submitForm.submit()">Cadastro de Clientes</a>
+		<form id="cadastroForm" method="post" action="controller">
+			<input type="hidden" name="pagina" value="cadastroCliente.jsp" />
+			<a href="#" onclick="document.getElementById('cadastroForm').submit()" >Cadastro de Clientes</a>
 		</form>
 	</body>
 </html>
