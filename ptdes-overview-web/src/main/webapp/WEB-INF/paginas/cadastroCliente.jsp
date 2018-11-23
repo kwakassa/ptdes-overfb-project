@@ -36,6 +36,10 @@ h1 {
 					<td>CPF:</td>
 					<td><input id="cpf" name="cpf" type="text" /></td>
 				</tr>
+				<tr align="center">
+					<td>Data Nascimento:</td>
+					<td><input id="dataNascimento" name="dataNascimento" type="text" /></td>
+				</tr>
 				<tr>
 					<td colspan="2" align="center">
 						<input type="submit" name="botaoCadastro" value="Cadastrar" />
@@ -46,5 +50,6 @@ h1 {
 	</div>
 	<script type="text/javascript" src="/overfb/js/MascaraValidacao.js"></script>
 	<script type="text/javascript" src="/overfb/js/formata-cpf.js"></script>
+	<script type="text/javascript" src="/overfb/js/formata-dataNascimento.js"></script>
 </body>
 </html>
