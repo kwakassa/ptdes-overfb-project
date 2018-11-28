@@ -3,3 +3,7 @@
 
 -- Coloque essa anotacao no metodo "getNuNsuConta()" da classe Ofbtb004Conta
 @SequenceGenerator(name = "conta_gen", schema = "OFB", sequenceName = "OFBSQ004_NU_NSU_CONTA", initialValue = 1, allocationSize = 0)
+
+-- Sera Necessario acrescentar o atributo 'columnDefinition="DECIMAL(5)" ' na annottation @Column de algumas Classes de Entidade como a do Grupo de Acesso
+-- Veja no Banco de Dados quais campos estarao escritos como Decimais e ajuste as Classes de Entidades
+-- No Curso colocaremos as classes já codificadas prontas. 

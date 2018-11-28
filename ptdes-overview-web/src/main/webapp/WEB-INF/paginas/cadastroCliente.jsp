@@ -23,10 +23,8 @@ h1 {
 			Cadastro Cliente</h1>
 	</div>
 	<div align="center">
-		<form name="cadastroCliente" action="controller" method="post"
-			target="_parent">
+		<form name="cadastroCliente" action="controller" method="post" target="_parent">
 			<input type="hidden" name="tarefa" value="cadastrarCliente" />
-			<input type="hidden" name="pagina" value="cadastro-sucesso.jsp" />
 			<table align="center" width="30%" border="0px">
 				<tr align="center">
 					<td width="50%">Nome do Cliente:</td>

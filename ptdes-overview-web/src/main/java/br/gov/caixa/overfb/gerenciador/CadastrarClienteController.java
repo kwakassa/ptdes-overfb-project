@@ -68,4 +68,9 @@ public class CadastrarClienteController {
 		dispatcher.forward(request, response);
 	}
 	
+	private static void direcionaPaginaSucesso(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/cadastro-sucesso.jsp");
+		dispatcher.forward(request, response);
+	}
+	
 }

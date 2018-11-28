@@ -35,27 +35,27 @@ public abstract class DaoImpl<E,PK extends Serializable> implements Dao<PK, E> {
 	
 	@Override
 	public void insere(E entidade) throws SQLException {
-		em.getTransaction().begin();
+		//em.getTransaction().begin();
 		em.persist(entidade);
 		em.flush();
-		em.getTransaction().commit();
+		//em.getTransaction().commit();
 	}
 
 	@Override
 	public void remove(E entidade) throws SQLException {
-		em.getTransaction().begin();
+		//em.getTransaction().begin();
 		em.remove(entidade);
 		em.flush();
-		em.getTransaction().commit();;
+		//em.getTransaction().commit();;
 		
 	}
 	/* Recupere o objeto com a buscaPorId, altere os atributos e depois executa a atualizacao*/
 	@Override
 	public void atualiza(E entidade) throws SQLException {
-		em.getTransaction().begin();
+		//em.getTransaction().begin();
 		em.merge(entidade);
 		em.flush();
-		em.getTransaction().commit();
+		//em.getTransaction().commit();
 	}
 
 	@Override
