@@ -1,10 +1,7 @@
 package br.gov.caixa.overfb.gerenciador;
 
-import java.io.IOException;
-
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,11 +13,13 @@ public class TarefaControllerDelegate {
 	@Inject
 	private CadastrarClienteController cadastrarClienteController;
 	
-	public void delegate(HttpServletRequest request, HttpServletResponse response, String tarefa) throws ServletException, IOException{
+	public String delegate(HttpServletRequest request, HttpServletResponse response, String tarefa){
 		if(tarefa.equals("irParaPaginaDeCadastro")){
-			cadastroClientePageController.executa(request, response);
+			return cadastroClientePageController.executa(request, response);
 		}else if(tarefa.equals("cadastrarCliente")){
-			cadastrarClienteController.executa(request, response);
+			return cadastrarClienteController.executa(request, response);
+		}else{
+			return "pagina-nao-existe.jsp";
 		}
 	}
 	

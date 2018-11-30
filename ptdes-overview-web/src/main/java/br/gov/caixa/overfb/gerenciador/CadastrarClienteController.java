@@ -1,35 +1,33 @@
 package br.gov.caixa.overfb.gerenciador;
 
-import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.apache.log4j.Logger;
 
-import br.gov.caixa.overfb.gerenciador.vo.ClienteVO;
 import br.gov.caixa.ptdes.dao.Ofbtb003ClienteDao;
 import br.gov.caixa.ptdes.utils.CalculaCPFHelper;
+import br.gov.caixa.ptdes.vo.ClienteVO;
 
 @Stateless
-public class CadastrarClienteController {
+public class CadastrarClienteController{
 	private static final Logger logger = Logger.getLogger(CadastrarClienteController.class);
 	@Inject
 	private CalculaCPFHelper cpfHelper;
 	@Inject
 	private Ofbtb003ClienteDao clienteDao;
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private final String PAGINA_SUCESSO = "/WEB-INF/paginas/cadastro-sucesso.jsp";
+	private final String PAGINA_ERRO = "error.jsp";
+	private final String PAGINA_DADOS_INVALIDOS = "/WEB-INF/paginas/dados-invalidos.jsp";
+	
+	public String executa(HttpServletRequest request, HttpServletResponse response){
 		String nomeCliente = request.getParameter("nomeCliente");
 		String cpf = request.getParameter("cpf");
 		String dataNascimento = request.getParameter("dataNascimento");
@@ -41,36 +39,22 @@ public class CadastrarClienteController {
 				ClienteVO cliente = new ClienteVO(nomeCliente, Long.parseLong(cpfSemFormatacao), java.sql.Date.valueOf(date));
 				try {
 					clienteDao.insere(cliente.getOfbtb003Cliente());
+					return PAGINA_SUCESSO;
 				} catch (SQLException e) {
 					logger.error("Erro ao tentar inserir o cliente no banco de dados",e);
-					direcionaPaginaDeErro(request, response);
+					return PAGINA_ERRO;
 				}
 			}else{
-				direcionaParaDadosInvalidos(request, response);
+				return PAGINA_DADOS_INVALIDOS;
 			}
 		}else{
-			direcionaParaDadosInvalidos(request, response);
+			return PAGINA_DADOS_INVALIDOS;
 		}
 	}
 	
 	private static boolean validaCpf(String cpf) {
 		CalculaCPFHelper cpfHelper = new CalculaCPFHelper();
 		return cpfHelper.isCpfValido(cpf);
-	}
-
-	private static void direcionaParaDadosInvalidos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/dados-invalidos.jsp");
-		dispatcher.forward(request, response);
-	}
-	
-	private static void direcionaPaginaDeErro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("error.jsp");
-		dispatcher.forward(request, response);
-	}
-	
-	private static void direcionaPaginaSucesso(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/paginas/cadastro-sucesso.jsp");
-		dispatcher.forward(request, response);
-	}
+	}	
 	
 }

@@ -1,0 +1,10 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.ws.overfb.caixa.gov.br/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soap:cadastrar>
+         <cpfComDigito>07341409592</cpfComDigito>
+         <NomeCompletoCliente>Joaquim Barbosa</NomeCompletoCliente>
+         <dataNascimento>17-08-1977</dataNascimento>
+      </soap:cadastrar>
+   </soapenv:Body>
+</soapenv:Envelope>

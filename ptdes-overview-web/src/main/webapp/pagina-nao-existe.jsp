@@ -5,10 +5,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<meta http-equiv="refresh" content="1;url=inicio.jsp">
-		<link rel="stylesheet" href="css/site.css">
-		<title>Pagina de Erro</title>
+		<title>Pagina N&atilde;o Existe</title>
 	</head>
 	<body>
-		<h1 class="sucesso">Cadastro Realizado com Sucesso! redirecionando</h1>
+		<h1>Pagina Solicitada n&atilde;o existe! Redirecionando para pagina principal...</h1>
 	</body>
 </html>

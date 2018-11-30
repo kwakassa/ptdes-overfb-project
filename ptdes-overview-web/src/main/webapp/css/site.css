@@ -18,3 +18,19 @@ iframe{
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
+
+.sucesso{
+	color: green;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.erro{
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}

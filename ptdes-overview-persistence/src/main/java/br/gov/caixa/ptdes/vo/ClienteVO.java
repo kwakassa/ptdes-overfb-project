@@ -1,4 +1,4 @@
-package br.gov.caixa.overfb.gerenciador.vo;
+package br.gov.caixa.ptdes.vo;
 
 import java.util.Date;
 

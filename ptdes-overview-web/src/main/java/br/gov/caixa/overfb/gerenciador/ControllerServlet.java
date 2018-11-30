@@ -9,11 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
-
-import br.gov.caixa.overfb.constante.Constantes;
 
 @WebServlet(urlPatterns = "/controller")
 public class ControllerServlet extends HttpServlet {
@@ -25,7 +22,9 @@ public class ControllerServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String tarefa = request.getParameter("tarefa");
 		if (tarefa != null && !tarefa.isEmpty()) {
-			tarefaControllerDelegate.delegate(request, response, tarefa);
+			String pagina = tarefaControllerDelegate.delegate(request, response, tarefa);
+			RequestDispatcher dispatcher = request.getRequestDispatcher(pagina);
+			dispatcher.forward(request, response);
 		}else{
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/error.jsp");
 			dispatcher.forward(request, response);
