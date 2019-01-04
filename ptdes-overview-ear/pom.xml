@@ -87,7 +87,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<skip>false</skip>
+					<skip>true</skip>
 					<hostname>127.0.0.1</hostname>
 					<username>ptdes</username>
 					<password>Ptdes01!</password>
